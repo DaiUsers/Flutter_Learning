@@ -88,6 +88,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   }
 
   @override
+  void didChangeLocales(List<Locale> locale) {
+    // TODO: implement didChangeLocales
+    super.didChangeLocales(locale);
+  }
+
+  @override
   void didChangeDependencies() {
     // TODO: implement didChangeDependencies
     super.didChangeDependencies();

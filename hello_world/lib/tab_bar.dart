@@ -31,6 +31,8 @@ class _MainTabPageState extends State<MainTabPage> {
         body: tabItemPages[currentPageIndex],
         bottomNavigationBar: new BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
+          // backgroundColor: Colors.amberAccent,
+          fixedColor: Colors.blue,
           onTap: tabBarDidOnTap,
           currentIndex: currentPageIndex,
           items: [
