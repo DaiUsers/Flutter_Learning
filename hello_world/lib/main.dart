@@ -6,11 +6,7 @@ import 'tab_bar.dart';
 import 'Home/list/index.dart';
 import 'Login/index/index.dart';
 
-
-void main() => runApp(
-  new MyApp()
-);
-
+void main() => runApp(new MyApp());
 
 class MyApp extends StatefulWidget {
   MyApp({Key key}) : super(key: key);
@@ -19,10 +15,8 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => new _MyAppState();
 }
 
-
 // WidgetsBindingObserver 監聽  App 生命周期
 class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -46,7 +40,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         primarySwatch: Colors.blue,
       ),
       home: new MainTabPage(),
-      routes: <String, WidgetBuilder> {
+      routes: <String, WidgetBuilder>{
         // '/home_list_index': (BuildContext context) => new ListPage()
       }, // 路由聲明 Navigator.of(context).pushNamed('/home_list_index');
       onGenerateRoute: (RouteSettings settings) {
@@ -58,11 +52,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
             return new ListPage();
           });
         } else {
-          return new MaterialPageRoute(builder: (context) {
-            return new LoginPage();
-          }, fullscreenDialog: false);
+          return new MaterialPageRoute(
+              builder: (context) {
+                return new LoginPage();
+              },
+              fullscreenDialog: false);
         }
-        
       },
     );
   }
@@ -84,24 +79,18 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   // 獲取粘貼板内容
   getClipboardData() {
-      var data = Clipboard.getData(Clipboard.kTextPlain);
-      if (data != null) {
-        data.then((obj) {
-          print("${obj.text}");
-        });
-      }
+    var data = Clipboard.getData(Clipboard.kTextPlain);
+    if (data != null) {
+      data.then((obj) {
+        print("${obj.text}");
+      });
+    }
   }
 
   @override
   void didChangeDependencies() {
     // TODO: implement didChangeDependencies
     super.didChangeDependencies();
-  }
-
-  @override
-  void didChangeLocale(Locale locale) {
-    // TODO: implement didChangeLocale
-    super.didChangeLocale(locale);
   }
 
   @override
