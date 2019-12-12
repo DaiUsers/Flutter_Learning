@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'Home/index.dart';
-import 'Article/index.dart';
-import 'Mine/index.dart';
+import 'Home/index/index.dart';
+import 'Article/index/index.dart';
+import 'Mine/index/index.dart';
 
 class MainTabPage extends StatefulWidget {
   MainTabPage({Key key}) : super(key: key);
@@ -41,7 +41,7 @@ class _MainTabPageState extends State<MainTabPage> {
             icon: new Icon(Icons.archive), title: new Text("文章")
           ),
           new BottomNavigationBarItem(
-            icon: new Icon(Icons.minimize), title: new Text("我的")
+            icon: new Icon(Icons.mail), title: new Text("我的")
           )
         ],
       )

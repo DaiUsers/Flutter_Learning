@@ -1,6 +1,8 @@
 name: hello_world
 description: A new Flutter project.
 
+version: 1.0.0
+
 dependencies:
   flutter:
     sdk: flutter
